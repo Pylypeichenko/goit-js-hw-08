@@ -34,6 +34,10 @@ function submitForm(e) {
 
   const previousData = JSON.parse(localStorage.getItem(feedbackForm));
 
+  if (!emailInput.value) {
+    window.alert('Please white your email :)');
+    return;
+  }
   console.log(`User's email: ${previousData.email}`);
   console.log(`User's message: ${previousData.message}`);
 
