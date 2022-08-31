@@ -32,14 +32,8 @@ function addPreviousDataToFeedbackForm() {
 function submitForm(e) {
   e.preventDefault();
 
-  const previousData = JSON.parse(localStorage.getItem(feedbackForm));
-
-  if (!emailInput.value) {
-    window.alert('Please white your email :)');
-    return;
-  }
-  console.log(`User's email: ${previousData.email}`);
-  console.log(`User's message: ${previousData.message}`);
+  console.log(`User's email: ${emailInput.value}`);
+  console.log(`User's message: ${messageInput.value}`);
 
   localStorage.removeItem(feedbackForm);
   e.target.reset();
