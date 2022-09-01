@@ -32,6 +32,11 @@ function addPreviousDataToFeedbackForm() {
 function submitForm(e) {
   e.preventDefault();
 
+  if (emailInput.value === '') {
+    window.alert('Please write your email :)');
+    return;
+  }
+
   console.log(`User's email: ${emailInput.value}`);
   console.log(`User's message: ${messageInput.value}`);
 
